@@ -1,0 +1,332 @@
+/* Maddison Erbabian — academic website */
+
+:root {
+  --bg: #fdfcf9;
+  --ink: #1c1b1a;
+  --muted: #6d6860;
+  --faint: #a09a90;
+  --accent: #0e5a5a;
+  --accent-dark: #093f3f;
+  --rule: #e7e2d9;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--serif);
+  font-size: 1.06rem;
+  line-height: 1.72;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Header / nav ---------- */
+
+header {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.4rem 0 1.3rem;
+}
+
+.header-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.site-name {
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.site-name a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+nav a:hover { color: var(--accent); }
+
+nav a.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Main ---------- */
+
+main { padding: 3rem 0 4rem; }
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.28rem;
+  font-weight: 600;
+  margin: 2.6rem 0 1.1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--rule);
+  letter-spacing: 0.01em;
+}
+
+h2:first-of-type { margin-top: 0; }
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 1.8rem 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.88rem;
+}
+
+p { margin-bottom: 1.1rem; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover { color: var(--accent-dark); text-decoration: underline; }
+
+/* ---------- Home ---------- */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 2.8rem;
+  align-items: start;
+}
+
+.portrait {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.portrait-caption {
+  font-size: 0.85rem;
+  color: var(--faint);
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+.sidebar-contact {
+  margin-top: 1.1rem;
+  font-size: 0.95rem;
+  line-height: 2;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-links a { color: var(--muted); }
+
+.footer-links a + a::before {
+  content: "\00B7";
+  color: var(--faint);
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.contact-line {
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
+.contact-line a { white-space: nowrap; }
+
+.links-row {
+  margin-top: 0.5rem;
+  font-size: 0.98rem;
+}
+
+.links-row a { margin-right: 1.3rem; }
+
+.news {
+  margin-top: 2.4rem;
+  background: #f5f2ea;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.3rem;
+  font-size: 0.99rem;
+}
+
+.news strong {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.news p { margin-bottom: 0.4rem; }
+.news p:last-child { margin-bottom: 0; }
+
+/* ---------- Research ---------- */
+
+.paper { margin-bottom: 1.7rem; }
+
+.paper-title {
+  font-weight: 600;
+  font-size: 1.06rem;
+  line-height: 1.45;
+}
+
+.paper-title a { color: var(--ink); }
+.paper-title a:hover { color: var(--accent); }
+
+.paper-authors {
+  color: var(--muted);
+  font-size: 0.97rem;
+  margin-top: 0.1rem;
+}
+
+.paper-note {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin-top: 0.15rem;
+}
+
+.paper-links {
+  font-size: 0.92rem;
+  margin-top: 0.25rem;
+}
+
+.paper-links a {
+  margin-right: 0.9rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.1rem 0.55rem;
+  color: var(--accent);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.paper-links a:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  background: #f2f7f7;
+}
+
+.policy-list { list-style: none; }
+
+.policy-list li {
+  margin-bottom: 0.9rem;
+  padding-left: 1.1rem;
+  text-indent: -1.1rem;
+  font-size: 0.99rem;
+}
+
+.policy-list .venue { color: var(--muted); font-style: italic; }
+
+/* ---------- Teaching ---------- */
+
+.item { margin-bottom: 1.3rem; }
+
+.item-title { font-weight: 600; }
+
+.item-detail { color: var(--muted); font-size: 0.97rem; }
+
+.award {
+  color: var(--accent-dark);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* ---------- Podcast ---------- */
+
+.podcast-links { margin-top: 1.4rem; }
+
+.podcast-links a {
+  display: inline-block;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.45rem 1.1rem;
+  margin: 0 0.8rem 0.8rem 0;
+  color: var(--accent);
+  font-size: 0.98rem;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.podcast-links a:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  background: #f2f7f7;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.4rem 0 2rem;
+  font-size: 0.88rem;
+  color: var(--faint);
+}
+
+footer .header-inner { align-items: center; }
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 640px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .home-grid .portrait-col {
+    order: -1;
+    max-width: 240px;
+  }
+
+  main { padding: 2.2rem 0 3rem; }
+
+  h1 { font-size: 1.6rem; }
+
+  nav ul { gap: 1rem; }
+}
